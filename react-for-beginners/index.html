@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="root"></div>
+  </body>
+  <!-- react는 interactivity의 원동력이다. -->
+  <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+  <!-- react DOM은 엘리먼트들을 html에 렌더 해준다.  -->
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+  <script>
+    const root = document.querySelector("#root");
+
+    //괄호 안에 생성하고자 하는 html 태그 이름.
+    const span = React.createElement(
+      "h3",
+      {
+        id: "sexy-span",
+        style: { color: "gray" },
+        onMouseEnter: () => console.log("mouse entered"),
+      },
+      "Hello, I'm a span"
+    );
+    const btn = React.createElement(
+      "button",
+      {
+        onClick: () => console.log("i'm clciked!!!"),
+        style: { backgroundColor: "tomato" },
+      },
+      "Click me"
+    );
+    const container = React.createElement("div", null, [span, btn]);
+
+    //render === show it to the USER
+    ReactDOM.render(container, root);
+  </script>
+</html>
