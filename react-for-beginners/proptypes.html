@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+  <script type="text/babel">
+    const Btn = ({ text, fontSize = 30 }) => {
+      return (
+        <button
+          style={{
+            fontSize,
+            padding: "10px 20px",
+            marginRight: "5px",
+          }}
+        >
+          {text}
+        </button>
+      );
+    };
+    Btn.propTypes = {
+      text: PropTypes.string.isRequired,
+      fontSize: PropTypes.number,
+    };
+    const App = () => {
+      return (
+        <div>
+          <Btn text="Kim Byul" fontSize={16} />
+          <Btn text={"Kim Donghwa"} />
+        </div>
+      );
+    };
+
+    const root = document.querySelector("#root");
+    ReactDOM.render(<App />, root);
+  </script>
+</html>
