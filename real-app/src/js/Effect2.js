@@ -9,7 +9,7 @@ function Hello() {
   return <h1>Hello</h1>;
 }
 
-function App3() {
+function App() {
   const [showing, setShowing] = useState(false);
   const onClick = () => setShowing((current) => !current);
   return (
@@ -20,4 +20,4 @@ function App3() {
   );
 }
 
-export default App3;
+export default App;

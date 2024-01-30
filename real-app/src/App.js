@@ -1,28 +1,16 @@
-import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./routes/Home";
 
 function App() {
-  const [toDo, setToDo] = useState("");
-  const [toDos, setToDos] = useState([]);
-  const onChange = (event) => {
-    setToDo(event.target.value);
-  };
-  const onSubmit = (event) => {
-    event.preventDefault();
-    if (toDo === "") return;
-    setToDo("");
-  };
   return (
-    <div>
-      <form onSubmit={onSubmit}>
-        <input
-          onChange={onChange}
-          value={toDo}
-          type="text"
-          placeholder="Write your to do..."
-        />
-        <button>Add To Do</button>
-      </form>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
+
 export default App;

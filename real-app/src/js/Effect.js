@@ -1,7 +1,7 @@
 import Button from "./Button";
 import { useState, useEffect } from "react";
 
-function App2() {
+function App() {
   const [counter, setValue] = useState(0);
   const [keyword, setKeyword] = useState("");
 
@@ -39,4 +39,4 @@ function App2() {
   );
 }
 
-export default App2;
+export default App;
