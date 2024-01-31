@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Kimbyul88/movie-web-service/static/js/main.47d0a223.js",
-    "index.html": "/Kimbyul88/movie-web-service/index.html",
-    "main.47d0a223.js.map": "/Kimbyul88/movie-web-service/static/js/main.47d0a223.js.map"
+    "main.js": "/movie-web-service/static/js/main.9a6e6e06.js",
+    "index.html": "/movie-web-service/index.html",
+    "main.9a6e6e06.js.map": "/movie-web-service/static/js/main.9a6e6e06.js.map"
   },
   "entrypoints": [
-    "static/js/main.47d0a223.js"
+    "static/js/main.9a6e6e06.js"
   ]
 }
